@@ -17,6 +17,12 @@ export default {
     DemoVue2Editor,
     UseDevVue2Editor,
     UseMyQuillEditor
+  },
+  data(){
+    return {}
+  },
+  mounted(){
+
   }
 }
 </script>

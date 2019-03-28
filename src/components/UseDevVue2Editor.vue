@@ -10,7 +10,7 @@
         <button @click="clickGetQuillContent1">Get Quill</button>
       </div>
     </div>
-
+    
     <div class="block">
       <h2>Example - Custom Toolbar and Event</h2>
       <div class="quill-editor-wrapper">

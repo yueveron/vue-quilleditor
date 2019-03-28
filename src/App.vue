@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <DemoVue2Editor></DemoVue2Editor> -->
+    <!-- <UseDevVue2Editor></UseDevVue2Editor> -->
+    <UseMyQuillEditor></UseMyQuillEditor>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DemoVue2Editor from './components/DemoVue2Editor.vue'
+import UseDevVue2Editor from './components/UseDevVue2Editor.vue'
+import UseMyQuillEditor from './components/UseMyQuillEditor.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    DemoVue2Editor,
+    UseDevVue2Editor,
+    UseMyQuillEditor
   }
 }
 </script>

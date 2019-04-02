@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import Quill from 'quill';  
+import Quill from 'quill';
 export default {
   name: 'MyQuillEditor',
   props: {
@@ -13,31 +13,32 @@ export default {
       type: String,
       default: ''
     }
-  }, 
-  data(){
+  },
+  data () {
     return {
-      editor: null  
+      editor: null
     }
   },
-  mounted(){
+  mounted () {
     // console.debug(this.$refs.quillContainer)
-    this.editor = new Quill(this.$refs.quillContainer,{
+    this.editor = new Quill(this.$refs.quillContainer, {
       modules: {
-        toolbar : [
+        toolbar: [
           [{ header: [1, 2, 3, 4, false] }],
-          ['bold', 'italic', 'underline']  
+          ['bold', 'italic', 'underline']
         ]
       },
-      theme : 'snow',
+      theme: 'snow',
       formats: ['bold', 'underline', 'header', 'italic']
     })
 
     this.editor.root.innerHTML = this.value;
     this.editor.on('text-change', () => this.update())
   },
-  methods:{
-    update(){
-      const inputVal = this.editor.getText()?this.editor.root.innerHTML : ''
+  methods: {
+    update () {
+      const inputVal = this.editor.getText() ? this.editor.root.innerHTML : ''
+      //emit : 通知父层修改 props.value
       this.$emit('input', inputVal)
     }
   }
